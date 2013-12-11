@@ -8,7 +8,7 @@ class Pocket
 	authorizeUrl: 'https://getpocket.com/auth/authorize'
 	accessTokenUrl: 'https://getpocket.com/v3/oauth/authorize'
 
-	constrcutor: (@consumer_key, @callback) ->
+	constructor: (@consumer_key, @callback) ->
 
 
 	authorize: (callback) ->
