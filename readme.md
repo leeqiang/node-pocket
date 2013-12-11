@@ -17,9 +17,14 @@ npm install getpocket
 
 
 ## Get pocket instance
-`pocket = require('getpocket').getPocket({consumer_key: 'xxx', redirect_uri: 'http://example.com/pocket/callback'})`
-or
 ```
+  config = {
+    consumer_key: 'your consumer_key'
+    redirect_uri: 'http://example.com/pocket/callback'
+  }
+
+  pocket = require('getpocket').getPocket(config)`
+or
   Pocket = require('getpocket')
   pocket = new Pocket('consumer_key', 'redirect_uri')
 ```
