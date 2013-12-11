@@ -48,4 +48,7 @@ class Pocket
 				callback(e)
 		)
 
+Pocket.getPocket = (options) ->
+	return new Pocket(options.consumer_key, options.callback)
+
 module.exports = Pocket
