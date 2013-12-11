@@ -19,7 +19,7 @@ class Pocket
 				consumer_key: @consumer_key
 				redirect_uri: @callback
 			})
-		, (err, resp, result) ->
+		, (err, resp, result) =>
 			try
 				result = qs.parse(result)
 				ri = encodeURIComponent("#{@callback}?code=#{result.code}")
