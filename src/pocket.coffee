@@ -11,6 +11,11 @@ class Pocket
 	constructor: (@consumer_key, @callback) ->
 
 
+	authorizeRoute: (req, res) ->
+		@authorize (err, r) ->
+			return res.send(err) if err
+			res.redirect(r.redirect)
+
 	authorize: (callback) ->
 		request.post(
 			headers: {'content-type' : 'application/x-www-form-urlencoded'}
